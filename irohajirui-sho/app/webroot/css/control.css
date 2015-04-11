@@ -1,0 +1,42 @@
+
+/************ delete frame *************/ 
+#delete {
+	height: 400px;
+	margin-right: 30px;
+	margin-bottom: 10px;
+	border: 1px #c0c0c0 solid;
+	overflow-x: auto;
+	white-space: nowrap;
+}
+
+table.delete {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+th.delete {
+	text-align: left;
+	padding: 10px 20px;
+	color: #333333;
+	border-bottom: 1px solid #666666;
+}
+
+td.delete {
+	text-align: left;
+	padding: 10px 20px;
+	color: #333333;
+	border-bottom: 1px solid #D0D0D0;
+}
+
+a.delete:link {
+	color: #1D5C79;
+	text-decoration: none;
+}
+a.delete:visited {
+	color: #1D5C79;
+	text-decoration: none;
+}
+a.delete:hover {
+	color: #4D7CA9;
+	text-decoration: underline;
+}
