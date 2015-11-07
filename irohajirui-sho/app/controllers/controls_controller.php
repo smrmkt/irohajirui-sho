@@ -353,7 +353,8 @@ class ControlsController extends AppController {
 				if ($value === "varchar") {
 					$sql .= "'" . $content[$cnt++] . "', ";
 				} else if ($value === "int") {
-					if (($item = strlen($content[$cnt++])) == 0) {
+					$item = $content[$cnt++];
+					if (strlen($item) === 0) {
 						$sql .= "0, ";
 					} else {
 						$sql .= $item . ", ";
@@ -363,7 +364,7 @@ class ControlsController extends AppController {
 			$sql = substr($sql, 0, strlen($sql) - 2) . "), ";
 		}
 		$sql = substr($sql, 0, strlen($sql) - 2) . ";";
- 		$result = $this->IrohaData->query($sql);
+		$result = $this->IrohaData->query($sql);
 		
 		// インサートの成功判定をしてトランザクションを終了する
 		if ($result == 1) {
