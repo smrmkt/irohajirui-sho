@@ -45,7 +45,7 @@ if ($type !== null) {
 			echo "<br />";
 			echo '<br />';
 	}
-	} else if ($type === "delete") {
+	} else if ($type === "delete" or $type === "delete_all") {
 		if ($count < 0) {
 			echo "<h4>データの削除に失敗しました</h4>";
 		} else if ($count >= 0) {
@@ -58,9 +58,9 @@ if ($type !== null) {
 
 <div class="span12">
 	<br />
-	<h4>削除するデータに含まれる値を入力してください</h4>
+	<h4>削除するデータを検索するとき</h4>
 	<hr>
-	<form class="form-horizontal" action="./delete" method="post">
+		<form class="form-horizontal" action="./delete" method="post">
 		<input type="hidden" name="type" value="search" />
 		<input type="hidden" name="id" value="0" />
 		<fieldset>
@@ -84,5 +84,15 @@ if ($type !== null) {
 			</div>
 		</fieldset>
 	</form>
+	<br /><br />
+	<h4>すべてのデータを削除するとき</h4>
+	<hr>
+	<span> </span>
+	<div class="span10 offset1">
+		<form class="form-horizontal" action="./delete" method="post" onSubmit="return check()">
+			<input type='hidden' name='type' value='delete_all' />
+			<button class='btn btn-primary' type='submit'>全削除</button>
+		</form>
+	</div>
 </div>
 <span>　</span>

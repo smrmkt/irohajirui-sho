@@ -308,6 +308,15 @@ class ControlsController extends AppController {
 					$sql = "ALTER TABLE iroha_datas AUTO_INCREMENT = 1;";
 					$this->IrohaData->query($sql);
 				}
+			} else if ($type === 'delete_all') {
+				$sql = "SELECT COUNT(*) FROM iroha_datas;";
+                                $count = $this->IrohaData->query($sql);
+                                $count = $count[0][0]["COUNT(*)"];
+				$this->set("count", $count);
+				$sql = "DELETE FROM iroha_datas;";
+				$this->IrohaData->query($sql);
+				$sql = "ALTER TABLE iroha_datas AUTO_INCREMENT = 1;";
+				$this->IrohaData->query($sql);
 			}
 		} else {
 			$this->set("count", null);
