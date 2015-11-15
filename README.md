@@ -13,6 +13,7 @@ irohajirui-sho
 - php-mysql
 - php-fpm
 - php-mbstring
+
 ##### data
 - mojikyo SVGs
   - http://www.mojikyo.org/PWU8N/index.php?SVG_download
