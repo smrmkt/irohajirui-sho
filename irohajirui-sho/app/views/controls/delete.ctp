@@ -89,9 +89,9 @@ if ($type !== null) {
 	<hr>
 	<span> </span>
 	<div class="span10 offset1">
-		<form class="form-horizontal" action="./delete" method="post" onSubmit="return check()">
+		<form class="form-horizontal" action="./delete" method="post">
 			<input type='hidden' name='type' value='delete_all' />
-			<button class='btn btn-primary' type='submit'>全削除</button>
+			<button class='btn btn-primary' type='submit' onclick="return confirm_delete()">全削除</button>
 		</form>
 	</div>
 </div>

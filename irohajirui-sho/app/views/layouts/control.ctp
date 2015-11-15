@@ -9,6 +9,7 @@
 		<?php echo $html->css("bootstrap/bootstrap"); ?>
 		<?php echo $javascript->link("folding"); ?>
 		<?php echo $javascript->link("box_check"); ?>
+		<?php echo $javascript->link("confirm"); ?>
 		<?php echo $javascript->link("bootstrap/jquery.min.1.7.1"); ?>
 		<?php echo $javascript->link("bootstrap/bootstrap.min"); ?>
 		<?php echo $javascript->link("bootstrap/bootstrap-tab"); ?>
