@@ -72,7 +72,7 @@
  *
  */
 
-define("IS_LOCAL", false);
+define("IS_LOCAL", true);
 
 class DATABASE_CONFIG {	
 	var $default = array(
@@ -81,7 +81,7 @@ class DATABASE_CONFIG {
 			'host' => 'localhost',
 			'login' => 'root',
 			'password' => 'root',
-			'database' => 'crdb',
+			'database' => 'iroha',
 			'prefix' => '',
 			'encoding' => 'utf8mb4',
 	);
