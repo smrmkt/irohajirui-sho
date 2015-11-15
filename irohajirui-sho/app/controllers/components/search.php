@@ -55,7 +55,7 @@ class SearchComponent extends Object {
 		);
 
 		foreach ($search_params as $key => $value) {
-			mysql_set_charset('utf8'); // Sanitize::clean()の\混入対策
+			mysql_query("SET NAMES 'utf8mb4'");
 			$value = $params['form'][$key];
 			$value = Sanitize::clean($value); // SQLインジェクション対策
 			$value = mb_convert_kana($value, 'C'); // 全角かな→全角カタカナ
