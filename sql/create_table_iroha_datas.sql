@@ -29,4 +29,4 @@ CREATE TABLE `iroha_datas` (
   `tyuubun` varchar(256) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   `sakuseisya_chuu` varchar(32) COLLATE utf8mb4_unicode_ci DEFAULT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=1388 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci);
+) ENGINE=InnoDB AUTO_INCREMENT=1388 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
