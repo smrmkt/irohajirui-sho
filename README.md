@@ -16,7 +16,7 @@ irohajirui-sho
 
 ##### data
 - mojikyo SVGs
-  - http://www.mojikyo.org/PWU8N/index.php?SVG_download
+  - http://www.mojikyo.org/#SVG_download
   - set files below:
     - irohajirui-sho/app/webroot/img/MojikyoSVG/MojikyoM_SVG_XXXXXX.svg
 
