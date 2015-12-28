@@ -1,4 +1,4 @@
-CREATE TABLE `iroha_datas` (
+CREATE TABLE IF NOT EXISTS `iroha_datas` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `midashigo` varchar(32) COLLATE utf8mb4_unicode_ci NOT NULL,
   `itaiji1` varchar(64) COLLATE utf8mb4_unicode_ci DEFAULT NULL,

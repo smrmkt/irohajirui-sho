@@ -1,4 +1,4 @@
-CREATE TABLE `controls` (
+CREATE TABLE IF NOT EXISTS `controls` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `changelog` text COLLATE utf8mb4_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
