@@ -14,8 +14,8 @@
 - hosts: container
   connection: docker
   roles:
-#    - nginx
-#    - php
+    - nginx
+    - php
     - iroha
-#    - mysql
+    - mysql
 
