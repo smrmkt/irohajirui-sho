@@ -1,8 +1,10 @@
-irohajirui-sho/app/tmp/cache/models/*
-irohajirui-sho/app/tmp/cache/persistent/*
-irohajirui-sho/app/tmp/logs/*
-irohajirui-sho/css
-irohajirui-sho/files
-irohajirui-sho/img
-irohajirui-sho/js
+app/irohajirui-sho/app/tmp/cache/models/*
+app/irohajirui-sho/app/tmp/cache/persistent/*
+app/irohajirui-sho/app/tmp/logs/*
+app/irohajirui-sho/css
+app/irohajirui-sho/files
+app/irohajirui-sho/img
+app/irohajirui-sho/js
+
+setup/site.retry
 
