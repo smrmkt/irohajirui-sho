@@ -7,4 +7,5 @@ app/irohajirui-sho/img
 app/irohajirui-sho/js
 
 setup/site.retry
+setup/roles/iroha/files/*
 
