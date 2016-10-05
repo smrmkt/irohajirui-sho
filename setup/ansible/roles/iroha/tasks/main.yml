@@ -1,0 +1,4 @@
+---
+- include: iroha.yml
+  tags: iroha
+

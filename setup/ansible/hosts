@@ -1,0 +1,6 @@
+[all:vars]
+stage=local
+ansible_ssh_user=vagrant
+
+[default]
+default

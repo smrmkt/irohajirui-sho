@@ -1,0 +1,23 @@
+---
+- name: git clone iroha
+  git: 
+    repo: "https://github.com/smrmkt/{{ repo_name }}"
+    dest: "{{ nginx_webroot }}/{{ repo_name }}"
+    force: yes
+  tags: iroha
+
+- name: change directory permission
+  file: path={{ nginx_webroot }}/{{ repo_name }}/{{ repo_name }}/app/tmp mode=777 recurse=yes
+  tags: iroha
+
+- name: add symlink
+  file: 
+    src: "{{ nginx_webroot }}/{{ repo_name }}/{{ repo_name }}/app/webroot/{{ item }}"
+    dest: "{{ nginx_webroot }}/{{ repo_name }}/{{ repo_name }}/{{ item }}"
+    state: link
+  with_items:
+    - css
+    - img
+    - js
+  tags: iroha
+

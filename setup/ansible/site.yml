@@ -1,0 +1,9 @@
+---
+- hosts: default
+  sudo: yes
+  roles:
+    - nginx
+    - php
+    - iroha
+    - mysql
+

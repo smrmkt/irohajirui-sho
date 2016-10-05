@@ -1,0 +1,19 @@
+---
+- name: setup mysql database
+  shell: mysql -uroot -p{{ mysql_root_password.stdout }} -e"CREATE DATABASE IF NOT EXISTS {{ db_name }};"
+  tags: mysql
+
+- name: setup mysql user
+  shell: mysql -uroot -p{{ mysql_root_password.stdout }} -e"GRANT ALL PRIVILEGES ON {{ db_name }}.* TO {{ user_name }}@localhost IDENTIFIED BY '{{ user_pass }}' WITH GRANT OPTION; FLUSH PRIVILEGES;"
+  tags: mysql
+
+- name: copy sql files
+  copy: src={{ item }} dest=/tmp/{{ item }}
+  with_items: queries
+  tags: mysql
+
+- name: create iroha table
+  shell: mysql -u{{ user_name }} -p{{ user_pass }} {{ db_name }} -e"source /tmp/{{ item }};"
+  with_items: queries
+  tags: mysql
+
