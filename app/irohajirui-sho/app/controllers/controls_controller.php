@@ -333,7 +333,11 @@ class ControlsController extends AppController {
 		
 		$sql = "SELECT changelog FROM controls;";
 		$changelog = $this->Control->query($sql);
-		$this->set("changelog", $changelog[0]["controls"]["changelog"]);
+        if (count($changelog) > 0) {
+    		$this->set("changelog", $changelog[0]["controls"]["changelog"]);
+        } else {
+            $this->set("changelog", "");
+        }
 	}
 	
 	function _insert($upload_file) {
