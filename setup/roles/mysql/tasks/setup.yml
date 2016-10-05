@@ -8,12 +8,14 @@
   tags: mysql
 
 - name: copy sql files
-  copy: src={{ item }} dest=/tmp/{{ item }}
-  with_items: queries
+  copy:
+    src: "{{ item }}"
+    dest: /tmp/{{ item }}
+  with_items: "{{ queries }}"
   tags: mysql
 
 - name: create iroha table
   shell: mysql -u{{ user_name }} -p{{ user_pass }} {{ db_name }} -e"source /tmp/{{ item }};"
-  with_items: queries
+  with_items: "{{ queries }}"
   tags: mysql
 

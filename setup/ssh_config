@@ -1,0 +1,7 @@
+Host default
+  HostName 192.168.99.100
+  User docker
+  UserKnownHostsFile /dev/null
+  IdentityFile ~/.docker/machine/machines/default/id_rsa
+  StrictHostKeyChecking no
+

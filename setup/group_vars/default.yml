@@ -1,5 +1,0 @@
-group_name: default
-
-nginx_webroot: /usr/share/nginx/html
-
-repo_name: irohajirui-sho

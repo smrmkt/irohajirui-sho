@@ -1,9 +1,21 @@
 ---
-- hosts: default
-  sudo: yes
+- hosts: docker_host
+  become: yes
+  remote_user: docker
+  tasks:
+    - name: deploy centos container
+      docker:
+        image: centos:centos6
+        name: iroha
+        ports: 80:80
+        expose: 80
+        tty: yes
+
+- hosts: container
+  connection: docker
   roles:
-    - nginx
-    - php
+#    - nginx
+#    - php
     - iroha
-    - mysql
+#    - mysql
 

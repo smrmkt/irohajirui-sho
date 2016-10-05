@@ -1,6 +1,6 @@
-[all:vars]
-stage=local
-ansible_ssh_user=vagrant
-
-[default]
+[docker_host]
 default
+
+[container]
+iroha
+
