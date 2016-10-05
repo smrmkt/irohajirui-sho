@@ -3,20 +3,20 @@
 - name: copy application directory
   unarchive:
     src: "{{ app_name }}.tar"
-    dest: "{{ nginx_webroot }}/{{ app_name }}"
+    dest: "{{ nginx_webroot }}"
   tags: iroha
 
 - name: change directory permission
   file:
-    path: "{{ nginx_webroot }}/{{ app_name }}/{{ app_name }}/app/tmp"
+    path: "{{ nginx_webroot }}/{{ app_name }}/app/tmp"
     mode: 0777
     recurse: yes
   tags: iroha
 
 - name: add symlink
   file: 
-    src: "{{ nginx_webroot }}/{{ app_name }}/{{ app_name }}/app/webroot/{{ item }}"
-    dest: "{{ nginx_webroot }}/{{ app_name }}/{{ app_name }}/{{ item }}"
+    src: "{{ nginx_webroot }}/{{ app_name }}/app/webroot/{{ item }}"
+    dest: "{{ nginx_webroot }}/{{ app_name }}/{{ item }}"
     state: link
   with_items:
     - css

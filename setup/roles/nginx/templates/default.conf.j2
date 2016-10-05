@@ -1,7 +1,7 @@
 server {
     listen      80;
     server_name localhost;
-    root        {{ nginx_webroot }}/{{ app_root }};
+    root        {{ nginx_webroot }}/{{ app_name }};
     access_log  /var/log/nginx/access.log main;
     index       index.php;
 
