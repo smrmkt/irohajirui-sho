@@ -276,10 +276,8 @@ if ($mcount > 0) {
 				echo '</td></tr>';
 			}
 		}
-		if (array_key_exists("IrohaData", $midashis)) {
-			if (($column = $midashi["IrohaData"]["sakuseisya_chuu"]) !== "") {
-				echo "<tr><td>作成者注</td><td>${column}</td></tr>";
-			}
+		if (($column = $midashi["IrohaData"]["sakuseisya_chuu"]) !== "") {
+			echo "<tr><td>作成者注</td><td>${column}</td></tr>";
 		}
 		echo '</table>';
 		echo "</div>";
